@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //IIFE (Immediately Invoked Function and expression)
+         
+        // Named IIFE  --> In this we use () . For executing function we use dance(); -- So at the place of expression 
+         // we use () for writing function as an expression and for executing we use this ()
+
+        (function dance(){                             
+            console.log(`I am dancing`);
+        })();
+         
+        // Unnamed IIFE --> In this without writing function we executed 
+        ( ()=>{
+            console.log(`I am watching`);
+        })();
+
+        // unnamed IIFE Arrow function with variable
+
+        ((name)=>{       // Here name in function is parameter
+            console.log(`I am ${name}`);
+        })("Shivasnh"); // Here we execute name as shivansh 
+
+    </script>
+</body>
+</html>

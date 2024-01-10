@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // { }--> Scope
+
+        let a=300;  // It is globally scoped variable
+
+        if (true) {
+             let a=10;
+             const b=30;
+             console.log("Inner:",a); // It is scoped variable  --> This value will give error when it print outside the scope  
+        }
+        console.log(a);
+
+    </script>
+    
+</body>
+</html>

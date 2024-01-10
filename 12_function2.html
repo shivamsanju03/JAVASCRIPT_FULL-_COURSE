@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //Rest Operator - Sometimes we need to pass many item but it onlyprints single so we use rest operator
+        function calculateCartPrice(...product){
+              return product;
+        }
+        console.log(calculateCartPrice(200,400,600)); //Here by using rest operator we can get all as an output
+
+        //passing an object to a function
+
+        const mydata={
+            username:"Shivansh",       //Make is a default data if anyone not pass the data at the last the we use this 
+            price:999
+        }
+        function myobject(anyobject=mydata){
+            return `Username is ${anyobject.username} and the price is ${anyobject.price}`;
+        }
+        console.log(myobject({
+            username:"Goldy",    // This is also the method of declearing an object
+            price:199 
+        }));
+
+        //Passing an array 
+
+        const myArray=[100,400,500,300];  //Default value 
+
+        function giveArray(arrayvalue=myArray){
+            return  arrayvalue[2];
+        }
+        console.log(giveArray([500,400,600,1000]));  // If we dont give value here then it takes the default value
+    </script>
+</body>
+</html>

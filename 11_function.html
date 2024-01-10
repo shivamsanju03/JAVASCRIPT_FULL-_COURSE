@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function saymyName(){
+            console.log("R");
+            console.log("A");
+            console.log("M");
+        }
+        saymyName();// Here the saymyName is reference and the ( ) is used to execute the code
+        
+        //Ading two numbers
+
+        function addTwoNumbers(a,b){
+           let c=a+b;
+           return c;
+        }
+        console.log(addTwoNumbers(4,6));
+          //We can also this programme as 
+          function addTwoNumbers(a,b){
+           return a+b;
+        }
+        const result=addTwoNumbers(4,6);
+        console.log(result);
+
+        //Example
+
+    //     function loginUser(username){
+    //            return `${username} Just logged in`;
+    //     }
+    //    console.log(loginUser("Shivansh"));
+    //    console.log(loginUser());  // -->It gives undefined value 
+
+       //another progrmame
+       function loginUser(username){
+             if (username===undefined) {
+                console.log("Please enter the username");
+                return ;  // By adding this value it returns and go to the another line 
+             }
+               return `${username} Just logged in`;
+        }
+        console.log(loginUser());
+
+        // For making it default  -- By making it default if the function is undefined then it will take the default value  i.e username="Ram";
+        function loginUser(username="Ram"){
+             if (username===undefined) {
+                console.log("Please enter the username");
+                return ;  // By adding this value it returns and go to the another line 
+             }
+               return `${username} Just logged in`;
+        }
+        console.log(loginUser());
+
+          
+
+    </script>
+</body>
+</html>

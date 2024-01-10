@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //forEach --> First we have to write variable then put a dot(.) then in the paranthesis we have to put the 
+        // function and then as a parfameter we have to give something then execute it
+
+        const language=["Cpp","Java","Js","Python"];
+        //Foreach loops
+        language.forEach( (key)=>{
+            console.log(key);
+        })
+
+        //Some more access of foEach function .By this we can print these hing in one access
+        
+        language.forEach( (key,index,arr)=>{
+            console.log(key,index,arr);
+        })
+
+        //Foreach in array by injecting object 
+
+        const coding=[
+            {
+                languageName:"Java",
+                languagefile:"Java"
+            },
+            {
+                languageName:"Javascript",
+                languagefile:"Js"
+            },
+            {
+                languageName:"Python",
+                languagefile:"Py"
+            }
+        ]
+
+        coding.forEach( (item)=>{
+           console.log(item.languageName);
+           console.log(item.languagefile);
+        })
+
+        // Important 
+        const myarr=[1,2,3,4,5,6,7,8,9,10]
+
+        myarr.forEach((num)=>{
+        console.log(num+10);
+        })
+
+    </script>
+</body>
+</html>

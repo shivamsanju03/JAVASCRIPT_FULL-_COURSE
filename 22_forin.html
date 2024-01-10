@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     
+    <script>
+        // Object printing by forin loops 
+
+        const myObj={
+            username:"Shivansh",
+            age:22,
+            course:"B.tech",
+            Interest:"Cricket"
+        }
+
+        for (const key in myObj) {
+             console.log(key); // By this we see that we can print key but the values of key will not be printing
+
+             // For printing the value of key we have to use ( myObj[key] ) , then we able to print the key and values of key
+
+             console.log(`${key} is ${myObj[key]}`);   // Object representation using forin loops
+        }
+
+        //Arrya in forin
+
+        const myArray=[1,2,3,4,5];
+        
+        for (const key in myArray) {
+            console.log(key);  // We see that it prints the index of the array  
+            console.log(myArray[key]);  // For printing the value of the array
+        }
+
+        // Maps --> It did not perform forin loops because it is not itterable 
+    </script>
+</body>
+</html>

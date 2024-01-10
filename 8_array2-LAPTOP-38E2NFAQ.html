@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+        //concat --> adding the two array to make the one array
+        const myArr=[1,2,3,4];
+        const myArr2=[5,6,7,8];
+        console.log(myArr.concat(myArr2));
+        
+        //spread operator 
+    const my_another_array=[...myArr,...myArr2]
+    console.log(my_another_array);
+
+       //New method
+
+       const newArr=[1,2,3,4,[5,6],7,[8,9,[10,11]]];
+
+      const newArr2=newArr.flat(Infinity);
+       console.log(newArr2);
+
+       //Asking an array
+       console.log(Array.isArray("Shivansh"));
+
+       //making an array
+       console.log(Array.from("Shivansh"));
+
+       //Array of 
+
+       let score1=100;
+       let score2=200;
+       let score3=300;
+
+       console.log(Array.of(score1,score2,score3));
+
+
+
+     </script>
+</body>
+</html>

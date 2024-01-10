@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="subject"></p>
+</body>
+<script>
+
+    //  Fetching --> ye method use hota hai koi bhi data ko send or receive krne ke liye 
+    // ye bhi ek tarah ka promise hai or isme bhi hmlog ko async await ka use krna hoga 
+
+    const URL="https://api.thecatapi.com/v1/images/search?limit=10/fact"
+
+    const getFact= async ()=>{
+        console.log("geting data .....");
+         let response= await fetch(URL);
+         console.log(response);        //JSON format
+         console.log(response.status);
+         console.log(response.type);
+    }
+getFact()
+
+</script>
+</html>

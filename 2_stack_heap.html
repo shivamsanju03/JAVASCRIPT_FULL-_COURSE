@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //Stack --> Primitive datatype is used
+        //In this the data will be change when it will printed
+        let myName="Shivansh";
+        let Mynewname=myName;
+        Mynewname="Goldy";
+
+        console.log(myName);
+        console.log(Mynewname);
+
+        //Heap -->Non primitive datatype is used 
+        //In this the data will not be change when it will printed
+         let user={
+            email:"shivansh@123",
+            upi:"goldy@ybl"
+         }
+         let user2=user;
+         user2.email="goldy@123"
+         console.log(user);
+         console.log(user2);
+    </script>
+</body>
+</html>

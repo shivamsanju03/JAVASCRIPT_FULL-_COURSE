@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="conatiner">
+
+        <ul class="myUl">
+            <li>Javascript</li>
+        </ul>
+    </div>
+</body>
+<script>
+//  const Myli=document.createElement('li')
+//  console.log(Myli);
+//  Myli.innerHTML='Java'
+// document.querySelector('.myUl').appendChild(Myli)
+
+function append(param){
+     const myLi=document.createElement('li')
+     myLi.innerHTML=`${param}`;
+     document.querySelector('.myUl').appendChild(myLi)
+}
+append('MongoDb')
+
+//edit
+const li=document.querySelector('li:nth-child(2)')
+const li2=document.createElement('li')
+li2.innerHTML='Mojo'
+li.replaceWith(li2)
+</script>
+</html>

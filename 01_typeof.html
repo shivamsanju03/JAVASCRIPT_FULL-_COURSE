@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     
+    <script>
+        const myNumber=33;
+        const myemail="shivansh@gmail.com";
+        const bigNumber=3248905834589893538080n;
+
+        const score=null;
+        const id=Symbol('123');
+        const myid =Symbol('123');
+        let mycity;
+
+        let myObj={
+            username:"Shivansh",   // Object is define as this 
+            age:21
+        };
+
+        console.log(typeof myNumber);
+        console.log(typeof myemail);
+        console.log(typeof bigNumber);
+        console.log(typeof score);
+        console.log(typeof id);
+        console.log(typeof myid);
+        console.log(id==myid); // As the value is same in the id and myid ,but this is not equal this makes the symbol unique
+        console.log(typeof mycity);
+        console.log(typeof myObj);
+
+        // Why javascript is dynamic language 
+          
+        let a="Shivansh";
+        a=1;
+        console.log(a);
+        //As the value of a is start with string but it is change into number as we console the code it give 1 
+        //as an output as the value changes troughout the code perform without any error make javascript dynamic .
+
+    </script>
+</body>
+</html>

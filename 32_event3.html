@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 class="heading">My name is Shivansh</h1>
+    <button id="Stop"> Stop</button>
+</body>
+<script>
+      const changeTxt=function(){ 
+      const changeMe= document.querySelector('.heading')
+      changeMe.innerHTML="I am B.tch Student"
+}
+ const changed =setInterval(changeTxt,2000)  // Set timeout is used to poping the othertext after some interval of time
+//If we want to stop this process by clickeing on button then 
+    document.querySelector('#Stop').addEventListener('click',function (){
+             clearTimeout(changed)
+    })
+</script>
+</html>

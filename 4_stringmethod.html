@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // Substring 
+        const myName="Shivansh";
+        console.log(myName.substring(0,4)); // It starts from 0 and end at 4 without including the last value print 4 character 
+        
+        //slice
+        console.log(myName.slice(-5,6));
+        console.log(myName.slice(-7,5));  // For knowing better slice turn to your copy
+        console.log(myName.slice(-8,4));
+
+        //trim
+        const petName="     Goldy    ";
+        console.log(petName);  // In this there is more spaces is added to variable so for removing the space we use trim
+        console.log(petName.trim());
+
+        //replace 
+        const email="shivansh.rajput108@gmail.com"
+         // It will replace the things which we want to replace
+        console.log(email.replace('108','-'));
+        //we can also ask to it wether the things is present or not
+        console.log(email.includes('shivansh'));
+        console.log(email.includes('goldy'));
+
+        //split
+
+        const myteam="mumbai-chennai-gujrat-delhi";
+
+        console.log(myteam.split('-'));
+
+        //concat
+        const str1='Shiansh';
+        const str2='Rajput';
+
+        console.log(str1.concat('',str2));
+        console.log(str1.concat(' ',str2));
+        console.log(str1.concat(', ',str2));
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p class="subject"></p>
+     <button class="btn">Get the facts</button>
+</body>
+<script>
+// JSON format --> JSON format is just like the object in javascript but acctually it is not an object
+// AJAX --> It is api call . we are sending request to the network and we are getting the response 
+
+const URL="https://cat-fact.herokuapp.com/facts"
+const para=document.querySelector('.subject')
+const button=document.querySelector('.btn')
+
+
+const myFact=async ()=>{
+    let response=await fetch(URL)
+    console.log(response);  // ye response hai 
+    let data = await response.json()  // Ye usable data deta hai jisko hmlog use kr sakte hai 
+     // iske output me array bn ke 5 data aayega or usko har ek data ko hmlog acheive kr sakte hai 
+    console.log(data);
+    console.log(data[0]);
+    para.innerHTML=data[1].text
+}
+// myFact();
+
+button.addEventListener('click',myFact)
+</script>
+</html>

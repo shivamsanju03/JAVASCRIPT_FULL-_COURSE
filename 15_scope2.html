@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        function one(){
+            const username="Shivansh";
+            function two(){
+                const werbsite="Youtube";
+                console.log(username);
+                console.log(werbsite);
+            }
+            two() // nested function will print by executing this  but if we want to print nested element i,e. website 
+                  // then it will give error  because the website is scoped value(execute inside the scope )
+
+            console.log(username); // it will execute properly because it is under the scoped variable       
+        }
+        one() //Without executing this function none of the element will print 
+
+        // if -else 
+
+        if (true) {
+            const name="Goldy";
+            if (name==="Goldy") {
+                const collage="VVit";
+                console.log(name);
+                console.log(collage);
+            }
+            console.log(name); // the collage will give error on printing because it is under the scoped variable
+        }
+
+        //***********************************interesting**************************
+        
+        console.log(addOne(3)); //Wether we write at the top or  bottom of the function it will print without giving error
+
+        function addOne(num){
+            return num +1;
+        }
+        console.log(addOne(3));
+
+        //************************* But ****************************
+
+        // console.log(addtwo(5));  ---> It will give error at here because we describe the function in the variable 
+                                    //   It does not know that what to execute  
+
+        const addtwo=function(num2){
+            return  num2+2;
+        }
+        console.log(addtwo(5));
+
+
+    </script>
+</body>
+</html>

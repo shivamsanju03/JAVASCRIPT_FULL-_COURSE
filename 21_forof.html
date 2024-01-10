@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        const arr=[1,2,3,4,5]
+       for (const i of arr) {
+         console.log(i);
+       }
+   
+       // using for of in string
+
+       const naming="Shivansh Rajput";
+       for (const name of naming) {
+        if (name==" ") {
+            continue;
+        }
+           console.log(name);
+       }
+
+       //Maps --> It is used for unique values 
+
+       const map=new Map()
+
+       map.set('IN',"India");
+       map.set('NZ',"New Zeland")
+       map.set('SA',"South Africa")
+       map.set('AUS',"Australia")
+
+       console.log(map);   // If we insert one more  map.set('IN',"India"); in it , it will not print it again
+
+       //For of loops in map   
+        for (const [key,values] of map) {   // It has very unique syntax that at place of i we can use [key,values]
+            console.log(key);  // For printing key
+            console.log(values); // for printing values
+            console.log(key,":-",values); // for printing key as well as values 
+        }
+
+        //For of in object  --> By this loops we cant print object 
+
+        const myObj={
+            username:"Shivansh",
+            age:22,
+            course:"B.tech",
+            Interest:"Cricket"
+        }
+        for (const [key,values] of myObj) {
+            console.log(key,":-",values);   // By printing object for an forof lopp we see there is error that myObj is
+                                            // not iterable so by this we know that we can use different lopp for object printing
+        }
+
+    </script>
+</body>
+</html>

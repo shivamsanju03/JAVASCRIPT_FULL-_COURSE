@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     
+    <script>
+        let myDate=new Date();
+
+        console.log(myDate.toString());
+        console.log(myDate.toDateString());
+        console.log(myDate.toLocaleString());
+
+        let CreateDate=new Date(2023,0,23,5,3,54)
+        console.log(CreateDate.toLocaleString());
+
+        //*****************Time******************
+
+        let myTimestamp=Date.now(); // It gives the time in milisecond or exact time 
+        console.log(myTimestamp);
+
+        console.log(CreateDate.getTime());
+
+        //Note 
+        let newDate=new Date();
+        
+        console.log(newDate.getDate());
+        console.log(newDate.getMonth());
+        console.log(newDate.getTime());
+        console.log(newDate.getDay());
+        
+        //As the index of months and day start from 0 therefore for getting the exact value which we see in our real life we 
+        //do   newDate.getDay()+1    or newDate.getMonth()+1
+        console.log(`The day is ${newDate.getDay()+1} and the month is ${newDate.getMonth()+1} `);
+
+        // This is the beauty of local string  by which we can do whatever we want 
+
+        console.log(myDate.toLocaleString('default',{
+            weekday:"long"
+        }));
+
+        let birthDate=new Date(2000,1,3)
+        console.log(birthDate.toLocaleString('default',{
+            weekday:"long",
+            month:"long",
+            year:"numeric"
+        }));
+
+    </script>
+</body>
+</html>

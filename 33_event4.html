@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="heading">Shivansh is a Rajput</h1>
+
+    <button class="start">Start</button>
+    <button class="stop">Stop</button>
+
+</body>
+<script>
+const myTxt=document .querySelector('.heading')
+function changeTxt(){
+    myTxt.innerHTML="I am a B.tech Student"
+}
+ let changed=setInterval(changeTxt,2000);
+
+document.querySelector('.start').addEventListener('click',function(){
+     setInterval(changeTxt,2000)
+})
+
+
+ const stop =document.querySelector('.stop').addEventListener('click',function(){
+     clearInterval(changed);
+  })
+
+
+  
+
+
+</script>
+</html>

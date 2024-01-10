@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //filter
+        const num=[1,2,3,4,5,6,7,8,9,10];
+        
+        let mynums=num.filter((item)=> item>4)
+        console.log(mynums);
+
+        let mynums2=num.filter((item)=>{return item>5})
+         console.log(mynums2);  //As we have use {} curly bresis so we have to use return .
+
+         // Important
+
+         const mybooks=[
+            {
+                title:"The Guliver",
+                pulish:1986,
+                edition:2000,
+                price:169
+            },
+            {
+                title:"Raja Or Rank",
+                pulish:1984,
+                edition:1999,
+                price:1056
+            },
+            {
+                title:"Maharana Pratap",
+                pulish:1900,
+                edition:2011,
+                price:1500
+            },
+            {
+                title:"The Rajputs",
+                pulish:1887,
+                edition:2021,
+                price:889
+            },
+            {
+                title:"The dairy of young girl",
+                pulish:1957,
+                edition:1957,
+                price:148
+            },
+            {
+                title:"The Hindu",
+                pulish:1800,
+                edition:2023,
+                price:999
+            },
+            {
+                title:"Mugal",
+                pulish:1901,
+                edition:2001,
+                price:20
+            }
+         ]
+
+         let  books =mybooks.filter((bk)=>bk.edition>=2000)
+         console.log(books);
+         
+         books=mybooks.filter((bk)=>{return bk.price>=1000})
+        console.log(books);
+
+        books=mybooks.filter((bk)=>{return bk.pulish<2000 && bk.edition<2000})
+        console.log(books);
+
+        // By this method we clearly know filter
+
+        // Map
+        const myarr=[1,2,3,4,5,6,7,8,9,10]
+
+        let nums=myarr.map((num)=>{return num+10})
+        console.log(nums);
+
+        //Chaining --> It is the method of using more than one method more than one time
+
+        const myNumber=[1,2,3,4,5,6,7,8,9,10];
+
+        const mynum=myNumber.map((num)=>num*10).map((num)=>num+1).filter((num)=>{return num>=40})
+        console.log(mynum);
+        
+        // Reduce --> Three things are there  i,e. acc-accumulator , curval-curve value , initial value - which definrs after return 
+
+        const a=[1,2,3,4];
+        const i=0; // This is initial value 
+        const b=a.reduce((acc,curval)=> acc+curval,i)
+        console.log(b);
+
+        //Example
+
+        const myShoopingcar=[
+        {
+            courseName:"Js",
+            price:999
+        },
+        {
+            courseName:"Python",
+            price:1999
+        },
+        {
+            courseName:"CPP",
+            price:899
+        },
+        {
+            courseName:"Data science",
+            price:"9999"  // We use string here so we convert it into number then we add
+        },
+        ]
+
+        const totalPrice=myShoopingcar.reduce((acc,total)=>{
+            return acc+Number(total.price)},0)
+        console.log(totalPrice);
+    </script>
+</body>
+</html>

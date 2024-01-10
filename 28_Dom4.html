@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+
+</body>
+<script>
+    function addChild(name) {
+        const myli=document.createElement('li');
+        myli.innerHTML=`${name}`
+       document.querySelector('.language').appendChild(myli)
+    }
+    addChild("java")
+    addChild("cpp")
+
+ function addchild2(name){
+    const myli=document.createElement('li');
+    myli.appendChild(document.createTextNode(name))
+    document.querySelector('.language').appendChild(myli)
+ }
+ addchild2("python")
+
+ //replace
+ const changeElement=document.querySelector('li:first-child')
+ console.log(changeElement);
+ changeElement.outerHTML="<li>Typescript</li>"
+
+ //edit
+
+ //1st method
+//  const change=document.querySelector('li:nth-child(2)')
+//   change.innerHTML='c'
+
+  //2nd method
+  const change=document.querySelector('li:nth-child(2)')
+ const mynewli=document.createElement('li')
+ mynewli.textContent="mojo"
+ change.replaceWith(mynewli)
+
+ //remove
+const lastlang=document.querySelector("li:last-child")
+lastlang.remove();
+</script>
+
+</html>

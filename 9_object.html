@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        const mySym=Symbol("Key1");
+        const JsUser={
+            name:"Shivansh",
+            age:23,
+            [mySym]:"Mykey1",             //This is symbol for symbol we use to keep symbol in [] then it redirect symbol
+            email:"shivansh@gmail.com",
+            location:"jaipur",
+            isLoggedin:false,
+            loginDate:["Monday","Thursday"],
+            "full name":"Shivansh Rajput" //This is another method of declering an array if we use this without " "
+                                          //Then it give error and it will not defining an object
+        }
+
+        console.log(JsUser.name);
+
+        console.log(JsUser["name"]); //This is also a method of declearing an array
+        console.log(JsUser["full name"]); 
+
+        console.log(JsUser[mySym]);
+        console.log(typeof JsUser[mySym]);
+
+        //Changing the value of object
+
+        JsUser.email="rajput@gmail.com";
+        console.log(JsUser);
+
+        //freezing an object   --> By freezing we cant change the value 
+
+        // Object.freeze(JsUser);
+        // JsUser.email="goldy@gmail.com";
+        console.log(JsUser);
+         // By freezing we cant add anything to the array so we are coemnting it
+
+
+        //Adding Greeting
+
+        JsUser.greeting=function(){
+            console.log("Hello JsUser");
+        }
+        console.log(JsUser.greeting());
+
+        JsUser.greeting2=function(){
+            console.log(`Hello JsUser ${this.name}`);  //For refrencing same object we use this as in object as we use (this.name)
+        }
+        console.log(JsUser.greeting2());
+
+    </script>
+</body>
+</html>

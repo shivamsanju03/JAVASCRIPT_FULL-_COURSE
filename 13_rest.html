@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+       
+       function calculateCarPrice(value1,value2,...num1){
+     // if we write num1 then it get the value of only num1 which is 200 but if we give ( ...num1 ) then it makes the
+     // array which stores the next values . As if we give parameter as value1 , value2 then value1 takes the i,e. value1=200
+     // and value2=300 and the rest of element will come in array
+            return num1;
+       }
+
+       console.log(calculateCarPrice(200,300,600,400,2000));
+
+       // 2-Handle a object
+
+       let user={
+        username:"Shivansh",
+        price:200
+       }
+       let user2={
+        username:"Amit",
+        price:600
+       }
+
+       function handleObject(anyobject){
+              console.log(`The username is ${anyobject.username} and the price is ${anyobject.price}`);
+              console.log(anyobject.username);
+              console.log(anyobject.price);
+       }
+       
+       
+     // We can directly pass an object through it as 
+       handleObject({
+        username:"Shivsnsh",
+        price:500
+       })
+    
+       //3-Passing value through array
+
+       function passingThroughArray(getArray){
+            console.log(getArray[0]);
+       }
+       passingThroughArray([200,400,500,600]);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let temp=45;
+
+        if (temp<50) {
+            console.log("Less than 50");
+        }else{
+            console.log("greater than 50");
+        }
+
+        let score=200;
+
+        if (score>100) {
+            const power="Fly";
+            console.log(`You will ${power}`);
+        }
+         //console.log(`You will ${power}`);  --> this is not under the scope so it give undefined value of power
+
+         //Short hand notation
+
+         const balance=1000;
+         if (balance>500)  console.log("Yes");
+
+         const loginUser=true;
+         const debitCard=true;
+
+         if (loginUser && debitCard) {
+            console.log("Allow to purchase");
+         }
+
+         //Switch
+
+         const month =3;
+         switch (month) {
+            case 1:
+              console.log("Jan");
+              break;
+            case 2:
+              console.log("Feb");
+              break;
+            case 3:
+              console.log("March");
+              break;
+            case 4:
+              console.log("April");
+              break;
+         
+            default:
+                console.log("Not a month");
+                break;
+         }
+
+         
+         // Here we see that without declearing the true or false we come to know the value . The datatype are divided 
+         // into truthy and falsy value .
+
+         const userEmail="Shivansh@gmail"
+         if (userEmail) {
+            console.log("email is verified");
+         }
+
+         const userEmail2=""  // Here we see that if we write the falsy value i.e, ""(Empty string) then we not get the value
+         if (userEmail2) {
+            console.log("email is verified");
+         }
+
+         //Falsy value --> false ,0,-0,""(empty string) , BigInt 0n ,undefined ,null ,NaN 
+
+         //Truthy value --> true ,1, any number , {}(enpty object),[]empty object,function(){}(empty function),"0",
+        // " "(If 1 space is added then it is considerd to be a truthy value ) 
+        
+        const userEmail3=[]  //It will execute the value beacuse it is a truthy value
+         if (userEmail3) {
+            console.log("email is verified");
+         }
+
+         
+         // Knwing the object method empty or not 
+
+        const myObject={};
+
+        if (Object.values(myObject).length ===0) {
+            console.log("Empty object");
+        }
+
+        //Terniary Operator 
+
+        let price =100;
+        
+        price >=80 ? console.log("More than 80") : console.log("less than 80");
+
+    </script>
+</body>
+</html>

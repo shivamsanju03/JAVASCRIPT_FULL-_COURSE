@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // *****************Getting data from the database*************
+
+    function getData(mydataId,getnextData){    // this function return the data 
+
+         setTimeout(()=>{
+             console.log("Data",mydataId);
+             if (getnextData) {      // Agar ye function exist krta ho tabhi ye data ko call krna hai
+                getnextData();
+             }
+         },2000)
+    }
+
+    // This is nested callback and this is called CALLBACK HELL 
+     
+    getData(1,()=>{  // getnextData ko hmlog ek next function bna kr execute karenge 
+        getData(2,()=>{
+            getData(3)
+        })
+    })
+</script>
+</html>

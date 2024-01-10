@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+           width: 150px; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <ul id="image">
+            <li><img id="shirt" src="goldy.jpg" onclick="change()" alt=""></li>
+            <li><img id="barimummy" src="goldy2.jpg" alt=""></li>
+            <li><img id="party" src="goldy3.jpg" alt=""></li>
+            <li><img id="dadimaa" src="goldy4.jpg" alt=""></li>
+            <li><a id="google" href="https://www.google.com/">Click</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // Method of using event
+    function change(){
+        alert('shirt')
+    }
+   
+    // another method
+    document.querySelector('#party').addEventListener('click',function(){
+        alert('party')
+    })
+    //one more method
+    document.querySelector('#dadimaa').onclick=function(){
+        alert('dadimaa')
+    }
+    //Propogation method
+   
+    // Bubbling --> First clicked the barimummy then clicked inside the ul
+    document.querySelector('#image').addEventListener('click',function(e){
+        console.log("clicked inside ul");
+    },false)
+    document.querySelector('#barimummy').addEventListener('click',function(e){
+          console.log("barimummy clicked");
+    },false)
+
+    //capturing --> First clicked inside the ul and then barimummy clicked
+    document.querySelector('#image').addEventListener('click',function(e){
+        console.log("clicked inside ul");
+    },true)
+    document.querySelector('#barimummy').addEventListener('click',function(e){
+          console.log("barimummy clicked");
+    },true)
+    
+    // Method on link 
+    document.querySelector('#google').addEventListener('click',function(e){
+       e.preventDefault(); // Here the default is when we click the ling we go to the goggle website but by using this it not happen
+    
+       console.log("Googl clicked");
+    },false) //False is for bubbling
+
+</script>
+</html>
